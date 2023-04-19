@@ -6,6 +6,7 @@ int main() {
     int numero_do_cartao[32] = {0};
     int numero_de_homem = 0;
     int numero_de_mulher = 0;
+    char teste[32] = {0};
 
     printf ("Digite o numero de cartoes, que foram distribuidos (1 <= N <= 1000): ");
     scanf ("%d", &numero_de_cartoes);
@@ -14,8 +15,15 @@ int main() {
     if (numero_de_cartoes >= 1 && numero_de_cartoes <= 1000) {
         printf ("Digite o numero de cada cartao (1 <= N <= 500):\n");
         
+        printf ("%s\n",teste);
+        
         for (int i = 0 ; i < numero_de_cartoes ; i++) {
             scanf ("%d", &numero_do_cartao[i]);
+            //printf ("%d\n",numero_do_cartao[i]);
+            if(numero_do_cartao[i] == 0){
+                i--;
+                printf ("\nDigite novamente, 0 nao e nem par, nem impar\n");
+            }
         }
 
         for (int i = 0 ; i < numero_de_cartoes ; i++) {
@@ -27,14 +35,14 @@ int main() {
             }
         }
         
-        //printf ("\nHomens: %d", numero_de_homem);
-        //printf ("\nMulher: %d", numero_de_mulher);
+        printf ("\nHomens: %d", numero_de_homem);
+        printf ("\nMulher: %d", numero_de_mulher);
 
         if (numero_de_mulher == numero_de_homem) {
-            printf ("S");
+            printf ("\nS");
         }
         else {
-            printf ("N");
+            printf ("\nN");
         }
     }
 

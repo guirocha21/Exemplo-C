@@ -65,7 +65,7 @@ int main() {
 
         Rev_Soma = atoi(Str_Rev_Soma);
 
-        printf ("%d", Rev_Soma);
+        printf ("\n%d", Rev_Soma);
     }
     else {
         printf ("Digite novamente");
